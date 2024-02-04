@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: cargo install typos-cli
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - run: typos
             - name: "Create fix patch"
               if: failure()
@@ -22,7 +22,7 @@ jobs:
     fmt:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - run: cargo fmt --check
             - name: "Create fix patch"
               if: failure()
@@ -38,7 +38,7 @@ jobs:
     clippy:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - run: cargo clippy -- -D warnings
             - name: "Create fix patch"
               if: failure()
@@ -58,5 +58,5 @@ jobs:
                 os: [ubuntu-latest, windows-latest, macos-latest]
         runs-on: ${{matrix.os}}
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - run: cargo test
