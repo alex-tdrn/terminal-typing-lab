@@ -1,0 +1,6 @@
+[files]
+# TODO: remove this exclusion once corpora are all extracted to their own files
+"extend-exclude" = ["src/corpus.rs"]
+
+[default.extend-words]
+"ratatui" = "ratatui"
