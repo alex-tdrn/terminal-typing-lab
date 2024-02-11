@@ -15,7 +15,7 @@ jobs:
                   git diff > typo_fixes.ptch
             - name: "Upload fix patch"
               if: failure()
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: fixes
                   path: typo_fixes.ptch
@@ -31,7 +31,7 @@ jobs:
                   git diff > fmt_fixes.ptch
             - name: "Upload fix patch"
               if: failure()
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: fixes
                   path: fmt_fixes.ptch
@@ -47,7 +47,7 @@ jobs:
                   git diff > clippy_fixes.ptch
             - name: "Upload fix patch"
               if: failure()
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: fixes
                   path: clippy_fixes.ptch
