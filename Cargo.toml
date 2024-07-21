@@ -2,6 +2,9 @@
 name = "terminal_typing_lab"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "A terminal typing tester/trainer"
+repository = "https://github.com/alex-tdrn/terminal_typing_lab"
 
 [[bin]]
 name = "ttl"
